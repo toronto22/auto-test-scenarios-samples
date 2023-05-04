@@ -3,14 +3,14 @@ Feature: Adding Customer Tests
   Background:
     When I navigate to Add Customer page
 
-  Scenario:  managerAddsCustomerWithValidCustomerInformation
+  Scenario:  Manager Adds Customer With Valid Customer Information
     When I add a new customer
       | firstName | lastName | postCode |
       | firstName | lastName | postCode |
     Then It should be show the alert about customer is added
     And I can login successfully with new customer information
 
-  Scenario Outline:  managerIsUnableToAddCustomerWithoutMandatoryField
+  Scenario Outline:  Manager Is Unable To Add Customer Without Mandatory Field
     When I add a new customer
       | firstName   | lastName   | postCode   |
       | <firstName> | <lastName> | <postCode> |
