@@ -6,7 +6,7 @@ Feature: Login Tests
       | standard_user | secret_sauce |
     Then I am logged in successfully
 
-  Scenario Outline: Login Successfully With Invalid Credential
+  Scenario Outline: Login With Invalid Credential
     When I Login with credential
       | username   | password   |
       | <username> | <password> |
